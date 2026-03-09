@@ -100,14 +100,13 @@ Implementado con hooks personalizados en React.
     Estructura semántica HTML
 
 🧰 Tecnologías
-    -Tecnología Uso
-    -React Framework frontend
-    -Three.js Visualización 3D
-    -Recharts Gráficas
-    -Framer Motion Animaciones
-    -Vite Build tool
-    -NASA API Fuente de datos
-
+-Tecnología Uso
+-React Framework frontend
+-Three.js Visualización 3D
+-Recharts Gráficas
+-Framer Motion Animaciones
+-Vite Build tool
+-NASA API Fuente de datos
 
 📡 Fuente de Datos
 
@@ -119,12 +118,11 @@ Documentación oficial:
 
 https://api.nasa.gov/v1
 
-
 ⚙️ Instalación
 
     Clonar el repositorio:
 
-        git clone https://github.com/TU-USUARIO/asteroid-dashboard.git
+        git clone https://github.com/RodrigoMarure23/Nasa_dash
 
     Entrar al proyecto:
 
@@ -139,7 +137,7 @@ https://api.nasa.gov/v1
         npm run dev
 
 🏗 Build para Producción
-    npm run build
+npm run build
 
 Previsualizar build:
 
