@@ -104,13 +104,13 @@ Implementado con hooks personalizados en React.
     Estructura semántica HTML
 
 🧰 Tecnologías
-    -Tecnología Uso
-    -React Framework frontend
-    -Three.js Visualización 3D
-    -Recharts Gráficas
-    -Framer Motion Animaciones
-    -Vite Build tool
-    -NASA API Fuente de datos
+-Tecnología Uso
+-React Framework frontend
+-Three.js Visualización 3D
+-Recharts Gráficas
+-Framer Motion Animaciones
+-Vite Build tool
+-NASA API Fuente de datos
 
 📡 Fuente de Datos
 
