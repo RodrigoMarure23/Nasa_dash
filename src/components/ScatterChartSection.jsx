@@ -192,12 +192,10 @@ export function ScatterChartSection({
           />
 
           <Tooltip
+            active={tooltipVisible}
+            cursor={false}
             wrapperStyle={{ pointerEvents: "auto" }}
-            content={
-              tooltipVisible ? (
-                <CustomTooltip t={t} onClose={closeTooltip} />
-              ) : null
-            }
+            content={<CustomTooltip t={t} onClose={closeTooltip} />}
           />
 
           <Scatter
