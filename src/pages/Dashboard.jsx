@@ -201,7 +201,6 @@ export function Dashboard() {
               flexDirection: "column",
               gap: "24px",
               minWidth: 100,
-              border: "solid red",
             }}
           >
             {loading ? (
