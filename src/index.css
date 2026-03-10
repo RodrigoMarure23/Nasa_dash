@@ -449,6 +449,15 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 640px) {
+  .chart-grid {
+    gap: 16px;
+  }
+}
+.chart-section {
+  margin-bottom: 24px;
+}
 .animate-spin-fast {
   animation: spin-fast 1s linear infinite;
 }

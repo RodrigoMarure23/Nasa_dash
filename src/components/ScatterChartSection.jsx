@@ -110,7 +110,9 @@ export function ScatterChartSection({
         border: "1px solid var(--border-color)",
         borderRadius: "12px",
         padding: "20px",
-        height: "400px",
+        height: "clamp(260px, 50vw, 400px)",
+        minHeight: "260px",
+        marginBottom: "24px",
       }}
     >
       <h2
@@ -132,26 +134,22 @@ export function ScatterChartSection({
         point represents one asteroid detected near Earth.
       </p>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="95%">
         <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
 
           <XAxis
             type="number"
             dataKey="velocity"
-            name="Velocity"
-            unit=" km/s"
             stroke="#64748b"
-            tick={{ fill: "#94a3b8" }}
+            tick={{ fill: "#94a3b8", fontSize: 11 }}
           />
 
           <YAxis
             type="number"
             dataKey="estimatedDiameter"
-            name="Size"
-            unit=" km"
             stroke="#64748b"
-            tick={{ fill: "#94a3b8" }}
+            tick={{ fill: "#94a3b8", fontSize: 11 }}
           />
 
           <Tooltip content={<CustomTooltip t={t} />} />

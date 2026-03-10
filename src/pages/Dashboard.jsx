@@ -277,8 +277,13 @@ export function Dashboard() {
                 </button>
               </div>
             ) : (
-              <section aria-labelledby="scatter-chart-title" role="region">
+              <section
+                aria-labelledby="scatter-chart-title"
+                role="region"
+                style={{ width: "100%", minWidth: 0 }}
+              >
                 <ScatterChartSection
+                  className="chart-section"
                   t={t}
                   data={filteredAsteroids}
                   onSelectAsteroid={handleSelectAsteroid}
