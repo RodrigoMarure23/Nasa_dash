@@ -50,7 +50,6 @@ export function Dashboard() {
       color: "#e2e8f0",
     });
   };
-
   const daysRange = getDaysBetween(filters.startDate, filters.endDate);
 
   if (daysRange > 7) {

@@ -9,7 +9,7 @@ const translations = {
     dangerous: "Peligroso",
     magnitude: "Magnitud",
     nearAsteroids: "Asteroides Cercanos",
-    extra:"extra",
+    extra: "extra",
     sizeVsVelocity: "Tamaño Estimado vs. Velocidad (km/s)",
     asteroidsPerDay: "Número de Asteroides por Día",
     loading: "Cargando datos espaciales...",
@@ -54,6 +54,11 @@ Muestra cuántos asteroides pasan cerca de la Tierra cada día.
 <b>☄ Visualización del Asteroide</b><br/>
 Muestra el asteroide seleccionado.
 El tamaño y la velocidad influyen en la animación.
+<br/><br/>
+
+<b>🖱 Interacción</b><br/>
+Puedes hacer <b>clic en cualquier punto de las gráficas o en el radar</b>.
+Al hacerlo, el asteroide seleccionado se mostrará en la animación y también se actualizarán sus datos en el panel.
 <br/><br/>
 
 <b>🚨 Colores</b><br/>
