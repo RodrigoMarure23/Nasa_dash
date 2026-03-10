@@ -128,7 +128,6 @@ export function ScatterChartSection({
         {t("sizeVsVelocity")}
       </h2>
 
-      {/* Screen reader description */}
       <p id="scatter-chart-desc" className="sr-only">
         Scatter chart showing asteroid diameter compared with velocity. Each
         point represents one asteroid detected near Earth.

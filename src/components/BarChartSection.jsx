@@ -123,7 +123,6 @@ export function BarChartSection({ t, data }) {
         {t("asteroidsPerDay")}
       </h2>
 
-      {/* Descripción para lectores de pantalla */}
       <p
         id="asteroids-chart-desc"
         style={{

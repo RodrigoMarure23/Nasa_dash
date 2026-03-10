@@ -35,12 +35,10 @@ export function useNasaApi(startDate, endDate) {
         }
         const result = await response.json();
 
-        // Process data
         const neoData = result.near_earth_objects;
         let flatAsteroids = [];
         let dailyStats = [];
 
-        // Sort dates to ensure chronological order in charts
         const sortedDates = Object.keys(neoData).sort();
 
         sortedDates.forEach((date) => {
@@ -75,7 +73,6 @@ export function useNasaApi(startDate, endDate) {
 
           flatAsteroids = [...flatAsteroids, ...processedDayAsteroids];
 
-          // Format date for display (e.g., "Oct 15")
           const dateObj = new Date(date);
           const shortDate = dateObj.toLocaleDateString(undefined, {
             month: "short",

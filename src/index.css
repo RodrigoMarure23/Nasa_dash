@@ -169,7 +169,6 @@ body {
 .react-datepicker__day-name {
   color: #94a3b8;
 }
-/* Custom scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -183,7 +182,6 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
-/* Interactive states that are hard to do with inline styles */
 .btn-hover:hover {
   background-color: var(--border-hover) !important;
 }
@@ -201,7 +199,6 @@ body {
 .group-hover-text:hover {
   color: var(--text-primary) !important;
 }
-/* Responsive Layout Classes */
 .dashboard-layout {
   display: flex;
   flex-direction: row;
@@ -234,6 +231,17 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-container {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
 }
 @media (min-width: 768px) {
   .dashboard-layout {
@@ -269,7 +277,6 @@ body {
   overflow: hidden;
 }
 
-/* Tierra */
 .radar-earth {
   position: absolute;
   left: 50%;
@@ -279,7 +286,6 @@ body {
   z-index: 5;
 }
 
-/* círculos radar */
 .radar-circle {
   position: absolute;
   inset: 20%;
@@ -295,7 +301,6 @@ body {
   inset: 60%;
 }
 
-/* sweep */
 .radar-sweep {
   position: absolute;
   width: 100%;
@@ -313,7 +318,6 @@ body {
   }
 }
 
-/* asteroides */
 .radar-dot {
   position: absolute;
   width: 8px;
@@ -382,15 +386,12 @@ body {
 .mission-stat strong {
   color: var(--accent-orange);
 }
-/* ===== Scrollbar global ===== */
-
-/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617; /* fondo oscuro espacial */
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -417,7 +418,6 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--accent-cyan) #020617;
 }
-/* Animations */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);

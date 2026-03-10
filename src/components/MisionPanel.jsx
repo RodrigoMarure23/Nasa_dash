@@ -22,7 +22,6 @@ export default function MissionPanel({ data }) {
     >
       <h3 id="mission-panel-title">{t("missionControl")}</h3>
 
-      {/* Descripción accesible */}
       <p
         style={{
           position: "absolute",

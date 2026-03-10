@@ -135,7 +135,12 @@ export function Dashboard() {
   return (
     <div
       className="bg-stars"
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        minWidth: "100vw",
+      }}
     >
       <a href="#main-content" className="skip-link">
         Ir al contenido principal
@@ -195,7 +200,8 @@ export function Dashboard() {
               display: "flex",
               flexDirection: "column",
               gap: "24px",
-              minWidth: 0,
+              minWidth: 100,
+              border: "solid red",
             }}
           >
             {loading ? (
@@ -280,7 +286,7 @@ export function Dashboard() {
               <section
                 aria-labelledby="scatter-chart-title"
                 role="region"
-                style={{ width: "100%", minWidth: 0 }}
+                style={{ width: "100%", minWidth: 100 }}
               >
                 <ScatterChartSection
                   className="chart-section"
@@ -295,7 +301,6 @@ export function Dashboard() {
                     <BarChartSection t={t} data={filteredDailyCounts} />
                   </div>
 
-                  {/* ASTEROID VISUAL */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -355,7 +360,6 @@ export function Dashboard() {
                     )}
                   </motion.div>
 
-                  {/* RADAR + MISSION PANEL */}
                   <div
                     style={{
                       display: "flex",

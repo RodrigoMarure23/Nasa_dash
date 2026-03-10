@@ -52,12 +52,10 @@ export function Header({ t, language, toggleLanguage }) {
         justifyContent: "space-between",
       }}
     >
-      {/* LEFT SECTION */}
       <div
         style={{ display: "flex", alignItems: "center", gap: "14px" }}
         aria-label="Application title"
       >
-        {/* Logo */}
         <div
           aria-hidden="true"
           style={{
@@ -78,7 +76,6 @@ export function Header({ t, language, toggleLanguage }) {
           />
         </div>
 
-        {/* Title */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h1
             style={{
@@ -105,7 +102,6 @@ export function Header({ t, language, toggleLanguage }) {
         </div>
       </div>
 
-      {/* RIGHT SECTION */}
       <div
         style={{
           display: "flex",
@@ -113,7 +109,6 @@ export function Header({ t, language, toggleLanguage }) {
           gap: "16px",
         }}
       >
-        {/* LIVE indicator */}
         <div
           aria-live="polite"
           aria-label="Live monitoring active"
@@ -138,7 +133,6 @@ export function Header({ t, language, toggleLanguage }) {
           <span>LIVE</span>
         </div>
 
-        {/* Clock */}
         <time
           aria-live="polite"
           aria-label={`Current time in Mexico City ${utcTime}`}
@@ -151,7 +145,6 @@ export function Header({ t, language, toggleLanguage }) {
           CDMX {utcTime}
         </time>
 
-        {/* Language Toggle */}
         <button
           onClick={toggleLanguage}
           onKeyDown={handleKeyToggle}

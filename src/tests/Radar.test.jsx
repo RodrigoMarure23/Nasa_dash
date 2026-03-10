@@ -49,7 +49,6 @@ describe("Radar Component", () => {
     const asteroidButtons = screen.getAllByRole("button");
     expect(asteroidButtons.length).toBe(mockAsteroids.length);
 
-    // Verificar label del primer asteroide
     expect(asteroidButtons[0]).toHaveAttribute(
       "aria-label",
       expect.stringContaining("Asteroid Ast1"),

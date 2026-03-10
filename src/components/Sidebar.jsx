@@ -52,7 +52,6 @@ export function Sidebar({ t, filters, setFilters, asteroids }) {
         gap: "24px",
       }}
     >
-      {/* Filters Card */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -92,7 +91,6 @@ export function Sidebar({ t, filters, setFilters, asteroids }) {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-          {/* Date Range */}
           <div
             style={{ display: "flex", flexDirection: "column", gap: "12px" }}
           >
@@ -139,7 +137,6 @@ export function Sidebar({ t, filters, setFilters, asteroids }) {
             </div>
           </div>
 
-          {/* Hazardous Filter */}
           <div
             style={{
               paddingTop: "8px",
@@ -203,7 +200,6 @@ export function Sidebar({ t, filters, setFilters, asteroids }) {
             </label>
           </div>
 
-          {/* Magnitude Range */}
           <div
             style={{
               paddingTop: "8px",
@@ -261,7 +257,6 @@ export function Sidebar({ t, filters, setFilters, asteroids }) {
         </div>
       </motion.div>
 
-      {/* Nearby Asteroids */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

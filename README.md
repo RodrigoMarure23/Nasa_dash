@@ -6,7 +6,7 @@ El proyecto combina visualización de datos, gráficos interactivos, animaciones
 
 🌌 Demo
 
-👉 https://nasadashtest.vercel.app/
+👉 https://nasa-dashboard-dina.vercel.app/
 
 🖥 Vista previa
 

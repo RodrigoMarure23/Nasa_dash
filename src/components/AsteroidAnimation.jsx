@@ -16,7 +16,6 @@ const AsteroidAnimation = ({
 
     let frame;
 
-    /* ---------------- WEBGL CHECK ---------------- */
 
     const canvas = document.createElement("canvas");
     const gl =
@@ -28,7 +27,6 @@ const AsteroidAnimation = ({
       return;
     }
 
-    /* ---------------- SCENE ---------------- */
 
     const scene = new THREE.Scene();
 
@@ -48,7 +46,6 @@ const AsteroidAnimation = ({
 
     container.appendChild(renderer.domElement);
 
-    /* ---------------- RESIZE ---------------- */
 
     const resize = () => {
       const w = container.clientWidth;
@@ -67,7 +64,6 @@ const AsteroidAnimation = ({
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
 
-    /* ---------------- LIGHTS ---------------- */
 
     const ambient = new THREE.AmbientLight(0x334155, 0.6);
     scene.add(ambient);
@@ -80,7 +76,6 @@ const AsteroidAnimation = ({
     rim.position.set(-3, 2, -4);
     scene.add(rim);
 
-    /* ---------------- ASTEROID ---------------- */
 
     let scale = 1;
 
@@ -143,7 +138,6 @@ const AsteroidAnimation = ({
       asteroid.add(glow);
     }
 
-    /* ---------------- PARTICLES ---------------- */
 
     const pGeo = new THREE.BufferGeometry();
 
@@ -173,7 +167,6 @@ const AsteroidAnimation = ({
     const particles = new THREE.Points(pGeo, pMat);
     scene.add(particles);
 
-    /* ---------------- KEYBOARD INTERACTION ---------------- */
 
     const handleKey = (e) => {
       const step = 0.05;
@@ -186,7 +179,6 @@ const AsteroidAnimation = ({
 
     container.addEventListener("keydown", handleKey);
 
-    /* ---------------- ANIMATION ---------------- */
 
     const clock = new THREE.Clock();
 
@@ -205,7 +197,6 @@ const AsteroidAnimation = ({
 
     animate();
 
-    /* ---------------- CLEANUP ---------------- */
 
     return () => {
       cancelAnimationFrame(frame);

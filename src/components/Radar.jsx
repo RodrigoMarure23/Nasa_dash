@@ -36,12 +36,10 @@ export default function Radar({ asteroids = [], onSelectAsteroid }) {
       aria-labelledby="radar-title"
       role="region"
     >
-      {/* título accesible */}
       <h3 id="radar-title" className="sr-only">
         Asteroid radar visualization
       </h3>
 
-      {/* Tierra */}
       <div
         className="radar-earth"
         role="img"
