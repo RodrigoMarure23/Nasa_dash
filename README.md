@@ -6,11 +6,15 @@ El proyecto combina visualización de datos, gráficos interactivos, animaciones
 
 🌌 Demo
 
-👉 Demo en línea (recomendado agregar cuando lo despliegues)
+👉 https://nasadashtest.vercel.app/
 
 🖥 Vista previa
 
-Agrega aquí un screenshot o GIF del dashboard.
+    ![Animacion Asteroide](preview/animacionAsteroide.png)
+    ![Dashboard](preview/dash1.png)
+    ![Dashboard Cargando](preview/dashCargando.png)
+    ![Asteroides Hazard](preview/dashHazard.png)
+    ![Asteroides Normal](preview/dashNormal.png)
 
 ✨ Características
 🛰 Monitoreo de Asteroides
@@ -100,13 +104,13 @@ Implementado con hooks personalizados en React.
     Estructura semántica HTML
 
 🧰 Tecnologías
--Tecnología Uso
--React Framework frontend
--Three.js Visualización 3D
--Recharts Gráficas
--Framer Motion Animaciones
--Vite Build tool
--NASA API Fuente de datos
+    -Tecnología Uso
+    -React Framework frontend
+    -Three.js Visualización 3D
+    -Recharts Gráficas
+    -Framer Motion Animaciones
+    -Vite Build tool
+    -NASA API Fuente de datos
 
 📡 Fuente de Datos
 
