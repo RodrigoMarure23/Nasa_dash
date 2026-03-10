@@ -9,6 +9,7 @@ const translations = {
     dangerous: "Peligroso",
     magnitude: "Magnitud",
     nearAsteroids: "Asteroides Cercanos",
+    extra:"extra",
     sizeVsVelocity: "Tamaño Estimado vs. Velocidad (km/s)",
     asteroidsPerDay: "Número de Asteroides por Día",
     loading: "Cargando datos espaciales...",
