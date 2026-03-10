@@ -418,6 +418,9 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--accent-cyan) #020617;
 }
+.clase {
+  border: "solid red";
+}
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
