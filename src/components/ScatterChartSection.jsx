@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ScatterChart,
   Scatter,
@@ -9,21 +10,44 @@ import {
 } from "recharts";
 import { motion } from "framer-motion";
 
-const CustomTooltip = ({ active, payload, t }) => {
+const CustomTooltip = ({ active, payload, t, onClose }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
 
     return (
       <div
         style={{
+          position: "relative",
           backgroundColor: "rgba(15,23,42,0.95)",
           border: "1px solid var(--border-color)",
           padding: "12px",
           borderRadius: "8px",
           backdropFilter: "blur(12px)",
+          boxShadow: "0 0 12px rgba(6,182,212,0.35)",
+          maxWidth: "220px",
         }}
       >
-        <p style={{ fontWeight: "bold", color: "white" }}>{data.name}</p>
+        {/* BOTÓN CERRAR */}
+        <button
+          onClick={onClose}
+          aria-label="Close tooltip"
+          style={{
+            position: "absolute",
+            top: "6px",
+            right: "8px",
+            background: "transparent",
+            border: "none",
+            color: "#94a3b8",
+            fontSize: "16px",
+            cursor: "pointer",
+          }}
+        >
+          ✕
+        </button>
+
+        <p style={{ fontWeight: "bold", color: "white", marginBottom: "6px" }}>
+          {data.name}
+        </p>
 
         <p style={{ margin: 0 }}>
           {t("velocity")}: {data.velocity.toFixed(2)} km/s
@@ -53,13 +77,24 @@ const CustomTooltip = ({ active, payload, t }) => {
 };
 
 function CustomDot(props) {
-  const { cx, cy, payload, selectedAsteroid, onSelectAsteroid } = props;
+  const {
+    cx,
+    cy,
+    payload,
+    selectedAsteroid,
+    onSelectAsteroid,
+    onActivateTooltip,
+  } = props;
 
   const isSelected = selectedAsteroid && payload.name === selectedAsteroid.name;
 
   const radius = isSelected ? 8 : 5;
-
   const color = payload.isHazardous ? "#f97316" : "#06b6d4";
+
+  const handleSelect = () => {
+    onActivateTooltip?.();
+    onSelectAsteroid?.(payload);
+  };
 
   return (
     <circle
@@ -82,10 +117,10 @@ function CustomDot(props) {
           ? "drop-shadow(0px 0px 6px rgba(255,255,255,0.9))"
           : "none",
       }}
-      onClick={() => onSelectAsteroid?.(payload)}
+      onClick={handleSelect}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
-          onSelectAsteroid?.(payload);
+          handleSelect();
         }
       }}
     />
@@ -98,6 +133,11 @@ export function ScatterChartSection({
   onSelectAsteroid,
   selectedAsteroid,
 }) {
+  const [tooltipVisible, setTooltipVisible] = useState(true);
+
+  const activateTooltip = () => setTooltipVisible(true);
+  const closeTooltip = () => setTooltipVisible(false);
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -151,7 +191,14 @@ export function ScatterChartSection({
             tick={{ fill: "#94a3b8", fontSize: 11 }}
           />
 
-          <Tooltip content={<CustomTooltip t={t} />} />
+          <Tooltip
+            wrapperStyle={{ pointerEvents: "auto" }}
+            content={
+              tooltipVisible ? (
+                <CustomTooltip t={t} onClose={closeTooltip} />
+              ) : null
+            }
+          />
 
           <Scatter
             data={data}
@@ -160,6 +207,7 @@ export function ScatterChartSection({
                 {...props}
                 selectedAsteroid={selectedAsteroid}
                 onSelectAsteroid={onSelectAsteroid}
+                onActivateTooltip={activateTooltip}
               />
             )}
           />
